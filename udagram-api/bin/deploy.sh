@@ -1,1 +1,3 @@
-eb use udagram-app-env && eb deploy
+eb use udagram-app-env --profile default
+eb setenv POSTGRES_USERNAME=$POSTGRES_USERNAME POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_DB=$POSTGRES_DB PORT=$PORT POSTGRES_HOST=$POSTGRES_HOST JWT_SECRET=$JWT_SECRET 
+eb deploy --profile default
