@@ -33,10 +33,6 @@ jobs:
           command: |
             npm run backend:build
       - run:
-          name: Front-End unit tests
-          command: |
-            cd udagram-frontend && ng test --watch=false
-      - run:
           name: Deploy frontend on S3 Bucket
           command: |
             npm run frontend:deploy
